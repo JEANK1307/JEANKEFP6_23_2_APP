@@ -14,7 +14,7 @@ namespace JEANKEFP6_23_2_APP
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new BienvenidaPage());
         }
 
         protected override void OnStart()

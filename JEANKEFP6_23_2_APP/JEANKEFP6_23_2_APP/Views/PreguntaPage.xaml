@@ -1,12 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="JEANKEFP6_23_2_APP.Views.PreguntaPage">
+             x:Class="JEANKEFP6_23_2_APP.Views.PreguntaPage" BackgroundImageSource="PreguntaIcon">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="20">
+
+
+            <Entry x:Name="TxtAsk" Placeholder="Question" Keyboard="Text" ClearButtonVisibility="WhileEditing">
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True" >
+                        <Setter Property="BackgroundColor" Value="BlueViolet"/>
+                        <Setter Property="TextColor" Value="WhiteSmoke"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+            <Entry x:Name="TxtImageUrl" Placeholder="ImageUrl" Keyboard="Text" ClearButtonVisibility="WhileEditing">
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True" >
+                        <Setter Property="BackgroundColor" Value="BlueViolet"/>
+                        <Setter Property="TextColor" Value="WhiteSmoke"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+            <Entry x:Name="TxtDetail" Placeholder="Name" Keyboard="Text" ClearButtonVisibility="WhileEditing">
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True" >
+                        <Setter Property="BackgroundColor" Value="BlueViolet"/>
+                        <Setter Property="TextColor" Value="WhiteSmoke"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+
+            <StackLayout>
+                <Button x:Name="BtnAdd" Text="Preguntar" CornerRadius="15" BackgroundColor="DarkGreen" FontSize="20" Clicked="BtnAdd_Clicked"/>
+                <Button x:Name="BtnCancel" Text="Cancel" CornerRadius="15" BackgroundColor="Maroon" FontSize="20" Clicked="BtnCancel_Clicked" />
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

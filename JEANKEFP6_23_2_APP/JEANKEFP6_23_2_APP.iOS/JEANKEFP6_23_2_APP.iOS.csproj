@@ -142,4 +142,10 @@
       <Name>JEANKEFP6_23_2_APP</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BienvenidaIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PreguntaIcon.jpg" />
+  </ItemGroup>
 </Project>

@@ -25,7 +25,7 @@ namespace JEANKEFP6_23_2_APP.Models
         public int IDPais { get; set; }
         public int IDRol { get; set; }
 
-        public async Task<UserDTO> GetUserInfo(string PUserName)
+        public async Task<UserDTO> GetUserInfo()
         {
             try
             {
@@ -33,7 +33,7 @@ namespace JEANKEFP6_23_2_APP.Models
                 //services\APIConnection para agregar el sufijo y lograr la ruta
                 //completa de consumo del end point que se quiere usar.
 
-                string RouteSufix = string.Format("Users/GetUserInfoByEmail?Pemail={0}", PUserName);
+                string RouteSufix = string.Format("Users/GetUserInfoByEmail?Pemail=3");
 
 
                 //armamos la ruta completa al endpoint en el API
@@ -43,8 +43,6 @@ namespace JEANKEFP6_23_2_APP.Models
                 RestClient client = new RestClient(URL);
 
                 Request = new RestRequest(URL, Method.Get);
-
-                //agregamos mecanismo de seguridad, en este caso API key
 
                 Request.AddHeader(GlobalObjects.ContentType, GlobalObjects.MimeType);
 
