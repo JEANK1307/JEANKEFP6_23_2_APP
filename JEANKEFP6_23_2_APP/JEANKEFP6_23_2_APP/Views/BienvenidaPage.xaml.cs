@@ -29,5 +29,10 @@ namespace JEANKEFP6_23_2_APP.Views
             GlobalObjects.MyLocalUser = await viewModel.GetUserDataAsync();      
             await Navigation.PushAsync(new PreguntaPage());
         }
+
+        private void BtnAsks_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

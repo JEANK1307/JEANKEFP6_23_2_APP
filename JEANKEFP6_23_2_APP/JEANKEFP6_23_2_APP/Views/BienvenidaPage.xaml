@@ -6,6 +6,7 @@
         <StackLayout VerticalOptions="Center" Padding="50, 25, 50, 25">
             
             <Button x:Name="BtnLogin" Text="Ingresar" BackgroundColor="Green" CornerRadius="15" Clicked="BtnLogin_Clicked" />
+            <Button x:Name="BtnAsks" Text="Ver todas las preguntas" BackgroundColor="Cyan" CornerRadius="15" Clicked="BtnAsks_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
